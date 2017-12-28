@@ -1,7 +1,7 @@
 #!/bin/bash
 #PASSWORD=${1:-secret}
 
-unzip -o /files/ords.3.0.9.348.07.16.zip -d /u01/ords
+unzip -o /files/ords.17.4.1.353.06.48.zip -d /u01/ords
 
 sed -i -E 's:secret:'$PASSWORD':g' /scripts/ords_unlock_account.sql
 sqlplus -S sys/$PASSWORD@XE as sysdba @/scripts/ords_unlock_account.sql < /dev/null
